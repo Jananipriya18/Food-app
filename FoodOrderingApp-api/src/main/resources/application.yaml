@@ -1,0 +1,46 @@
+server:
+  servlet:
+    port: 8080
+    contextPath: /api
+
+spring:
+  application:
+    name: FoodOrderingApp-api
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/restaurantdb
+    username: root
+    password: Janani18
+
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: update # You can use "update" or other values depending on your strategy.
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      
+      
+#server:
+#  servlet:
+#    port: 8080
+#    contextPath: /api
+#
+#spring:
+#
+#  application:
+#    name: FoodOrderingApp-api
+#
+#  datasource:
+#    driverClassName: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/restaurantdb
+#    username: postgres
+#    password: test1234
+#
+#  jpa:
+#    properties:
+#      hibernate:
+#        temp:
+#          use_jdbc_metadata_defaults: false
+#    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+

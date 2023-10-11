@@ -1,0 +1,60 @@
+package com.upgrad.FoodOrderingApp.api.model;
+
+import java.util.UUID;
+
+public class LoginResponse {
+    private UUID id;
+    private String message;
+    private String firstName;
+    private String lastName;
+    private String emailAddress;
+    private String contactNumber;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+}

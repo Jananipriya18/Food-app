@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: janan
+Build-Jdk: 17.0.8.1
+Implementation-Title: FoodOrderingApp-api
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: FoodOrderingApp-Backend
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/FoodOrderingApp-Backend/FoodOrderingApp-api
+Created-By: Maven Integration for Eclipse
+

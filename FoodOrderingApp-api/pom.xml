@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>FoodOrderingApp-Backend</artifactId>
+        <groupId>FoodOrderingApp-Backend</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>FoodOrderingApp-api</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Swagger Dependencies -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.6.1</version>
+            <scope>compile</scope>
+        </dependency>
+        
+
+        <!-- Your Service Module Dependency -->
+        <dependency>
+            <groupId>FoodOrderingApp-Backend</groupId>
+            <artifactId>FoodOrderingApp-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Spring Boot Test Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- MySQL Connector Dependency -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-boot-starter</artifactId>
+    <version>3.0.0</version>
+</dependency>
+<dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger-ui</artifactId>
+    <version>3.0.0</version>
+</dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-codegen-maven-plugin</artifactId>
+                <version>2.3.1</version>
+                <configuration>
+                    <!-- Configuration for code generation -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>customer</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/endpoints/customer.json</inputSpec>
+                            <language>spring</language>
+                        </configuration>
+                    </execution>
+                    <!-- Add other executions for different modules if needed -->
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+
+
